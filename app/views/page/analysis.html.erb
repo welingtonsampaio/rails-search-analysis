@@ -1,0 +1,20 @@
+<div ng-app="Analysis" ng-cloak ng-controller="AnalysisCtrl">
+  <div class="row m-t-30">
+    <table class="table striped">
+      <thead>
+        <tr>
+          <th>Search Term</th>
+          <th>Content Preview</th>
+          <th>Total Search</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in results">
+          <td>{{item.article.title}}</td>
+          <td>{{item.article.content | limitTo:80}}...</td>
+          <td class="text-center">{{item.total}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

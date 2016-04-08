@@ -1,0 +1,104 @@
+{
+  "articles": [
+    {
+      "title": "Import your user data into Intercom",
+      "content": "Import users during account creation\nDuring onboarding we provide a simple way for you to import a list of users via CSV, Mailchimp or Mixpanel.\nAll four methods allow you to import username, email, userID and signup date in the format DD/MM/YYYY, ISO 8601, or a Unix time stamp. Please note that if "
+    },
+    {
+      "title": "A guide to sending email from your own address",
+      "content": "It’s easy to use your own email address when sending messages through Intercom. Depending on what plan you're on, you can do this in one of two ways:\nMethod 1: Set your email address as a custom email address \nIf you have any of our products, you can set your own email address as a custom email addr"
+    },
+    {
+      "title": "Assigning all new conversations to one team member",
+      "content": "You can choose a team member who is assigned to handle all new inbound messages from users via the Intercom Messenger. To assign all new conversations to a single team member, select 'Messaging' from your App settings (located in the top right of your screen).\n"
+    },
+    {
+      "title": "How you and your team get notified",
+      "content": "Each of your teammates on your app controls their own mail notifications via their personal account settings. You can change your notification settings by clicking on your settings menu in the bottom left-hand corner of your screen, and choosing your Notifications settings\nAssigning someone else\nYou"
+    },
+    {
+      "title": "What are the Price Plans for Intercom?",
+      "content": "You can find our pricing plans here."
+    },
+    {
+      "title": "Updating Your Privacy Policy",
+      "content": "Always review changes to your sites terms & privacy policy with your lawyers. We suggest that you include the following section to account for using Intercom on your website or web application.\nUse of Intercom Services: We use third-party analytics services to help understand your usage of our servi"
+    },
+    {
+      "title": "INTERCOM TERMS OF SERVICE",
+      "content": "(14 December 2015)\nPLEASE READ THESE TERMS OF USE CAREFULLY BEFORE USING THE SERVICES OFFERED BY INTERCOM, INC. AND INTERCOM R&D (“INTERCOM,” “WE,” “US,” “OUR”). BY VISITING THE WEBSITE OR USING THE SERVICES IN ANY MANNER, YOU AGREE THAT YOU HAVE READ AND AGREE TO BE BOUND BY AND A PARTY TO THE TERM"
+    },
+    {
+      "title": "Our best practice guide to customer support",
+      "content": "Since the early days of Intercom we've worked hard to maintain an exceptionally high standard of customer support. Along the way we've learned a whole bunch of tips and tricks that we'd like to share with you so that you can give your customers the world-class support they deserve.\nPart one of this "
+    },
+    {
+      "title": "Your Inbox Insights explained",
+      "content": "You can access your Inbox Insights by selecting the Support icon from the left-hand navigation bar.\nHow can I use Inbox Insights to manage my team?\nInbox Insights can help you understand if your support volume is increasing, if your team is responding fast enough to your users, and who on your team "
+    },
+    {
+      "title": "Customer support resources",
+      "content": "We've written some very popular posts on our blog about how best to do quality customer support with Intercom. We've hand-picked these to get you started:\n\n\nTalking tech with non-tech people. Explaining complex software to customers who may not have a technical background certainly has its challenge"
+    },
+    {
+      "title": "The Intercom Platform FAQs",
+      "content": "What is a Unix timestamp and why is it needed?\nHow is a session defined?\nHow does Intercom track first and last name of my users?\nHow do I create filters for dates in the future?\nCan I export user or company data as a CSV?"
+    },
+    {
+      "title": "Check up on your customers regularly",
+      "content": "Automated check-up messages give you a constant stream of valuable information into your inbox about your users, and their behaviors. Lots of our customers send these messages because they're so powerful. Setting these up puts a process in place to ensure that you're never caught off guard by your c"
+    },
+    {
+      "title": "Customer feedback resources",
+      "content": "We've written some very popular posts on our blog about how best to get quality customer feedback about your product. We've hand-picked these to get you started:\n\n\nProduct feedback you should ignore. One of the issues you face as your startup grows and starts to gain traction is that suddenly everyo"
+    },
+    {
+      "title": "Our best practice guide for staying personal at scale",
+      "content": "Impersonal messages are perfect if you want the recipient to do nothing. But what if you want your recipient to read more, click a button, watch a video, download a file, trust you, believe you, or have a relationship with you? You need to be friendly, natural, and timely. Put simply, you need to be"
+    },
+    {
+      "title": "A guide to announcing your new features",
+      "content": "\nAnnouncing your feature in the right way to the right people, at the right time will convince more of them to sit up and try it. Below we show you how we announce new features at Intercom and how you can too. You’ll learn how to target the right people, showcase your feature’s possibilities, priori"
+    },
+    {
+      "title": "Choosing the right kind of message",
+      "content": "How you say something depends on what it is you want to say. When it’s time to reach out to your customers, you’re faced with a few decisions on what kind of message to send. \nFirst, you need to decide if what you want to say is a one off, or if you want the message to keep sending to users as they "
+    },
+    {
+      "title": "Scheduling a message",
+      "content": "It's easy to schedule a message to send at exactly the right time. You can do this in two ways; scheduling a particular date and time for your message to begin sending (available with all message types), or by setting a specific delivery window during which your email will only send (only available "
+    },
+    {
+      "title": "Measuring the effectiveness of your messages with goals and A/B testing",
+      "content": "Intercom makes it easy to measure the effectiveness of your messages with our goals and A/B testing features. First, lets look at goals.\nGoals\nEvery message you send has a goal. But open and click rates will only tell you so much. Goals are the true measure of a how a message is performing. When cre"
+    },
+    {
+      "title": "A guide to creating HTML emails",
+      "content": "You can use HTML to create beautiful, simple and responsive emails in Intercom. You have three options, and each one serves a different purpose. You can either:\n\nCreate a full HTML email for one-off rich email campaigns.\nCraft a custom template designed with your branding and save it in Intercom so "
+    },
+    {
+      "title": "Improving your email delivery and open rate",
+      "content": "Email deliverability is generally measured by open rate. Poor open rate is usually because of a few known reasons. Here is our guide for increasing yours.\nHow does Intercom help?\nAs well as proactively making sure our customers have high deliverability rates, Intercom has a host of features that wil"
+    },
+    {
+      "title": "Resources to help with engaging your customers",
+      "content": "We've put together this list of blog posts that are hand-picked to guide you in creating the perfect message schedule:\n\n\nEmail 101: Opens, Clicks, Conversions. A badly-written email is about as effective as a love letter addressed “To whom it may concern.\" Don't waste your time writing them.\n\nHow In"
+    },
+    {
+      "title": "How does Intercom track first and last name of my users?",
+      "content": "Intercom will automatically split your name attribute into first name and last name. For example:\n\nIf name is \"Joe Bloggs\", Intercom tracks it as First name: \"Joe\", Last name: \"Bloggs\".\nIf name is \"MÁRCIA HELENA MAIA DE LIMA\", Intercom tracks it as First name: \"MÁRCIA\" Last name: \"HELENA MAIA DE LIM"
+    },
+    {
+      "title": "Can I use Intercom on multiple domains?",
+      "content": "Yes. But only as long as you use the same app_id everywhere.\nImportant: If you have the Intercom Acquire product, your conversations can’t be seen on different domains for the same lead, as we track that using cookies. Lead cookies last indefinitely but only on the same domain. Installing the messen"
+    },
+    {
+      "title": "Real time user presence (the technical explanation)",
+      "content": "Real-time presence works based on periodic heartbeat requests coming from the user. The user sends those heartbeats every 30 seconds and is marked as offline when we haven't had a heartbeat in 2 minutes. Even at the lowest levels we don't always immediately detect the loss of connection as soon as t"
+    },
+    {
+      "title": "How can I sync unsubscribed users with MailChimp?",
+      "content": "When a user unsubscribes from an email sent through MailChimp, you can make sure that Intercom keeps their unsubscribe status in sync. Likewise, when a user unsubscribes from an Intercom email, their unsubscribe status will sync with MailChimp too. Below, we’ll show you how to sync your unsubscribes"
+    }
+  ]
+}

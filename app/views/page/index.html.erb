@@ -1,0 +1,29 @@
+<div ng-app="Search" ng-cloak ng-controller="SearchCtrl">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="search" autofocus type="text" ng-model="s" placeholder="What do you need help with?">
+        </div>
+        <div ng-init="displaySearch=false" ng-show="displaySearch">
+          <div class="col s6 offset-s3">
+            <div class="progress">
+              <div class="indeterminate"></div>
+            </div>
+          </div>
+          <div class="col s6 offset-s3 text-center">Searching for: {{s}}...</div>
+        </div>
+
+        <div class="col s12" ng-show="results.length > 0">
+          <div class="collection">
+            <a ng-href="{{item.article.url}}" class="collection-item" ng-repeat="item in results">
+              <h5>{{item.article.title}}</h5>
+              <p>{{item.article.content}}</p>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
