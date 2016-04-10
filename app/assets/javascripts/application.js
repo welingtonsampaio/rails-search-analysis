@@ -14,6 +14,7 @@
 //= require angular-animate.min
 //= require angular-aria.min
 //= require angular-messages.min
+//= require angular-cookies.min
 // require angular-material.min
 //= require app/search
 //= require app/analysis

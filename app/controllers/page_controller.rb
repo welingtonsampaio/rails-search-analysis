@@ -1,8 +1,4 @@
 class PageController < ApplicationController
-  def index
-  end
-
-  def analysis
-
-  end
+  def index ; end
+  def analysis ; end
 end

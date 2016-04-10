@@ -11,12 +11,17 @@
               <div class="indeterminate"></div>
             </div>
           </div>
-          <div class="col s6 offset-s3 text-center">Searching for: {{s}}...</div>
+          <div class="col s6 offset-s3 text-center text-searching">Searching for "<span class="text-info">{{s}}</span>"</div>
+        </div>
+
+
+        <div ng-show="displayNotFound">
+          <div class="col s12 text-center text-searching">Sorry, we found <span class="text-info">0</span> results for “<span class="text-info">{{s}}</span>"</div>
         </div>
 
         <div class="col s12" ng-show="results.length > 0">
           <div class="collection">
-            <a ng-href="{{item.article.url}}" class="collection-item" ng-repeat="item in results">
+            <a ng-href="{{item.article.url}}?from=search" class="collection-item" ng-repeat="item in results">
               <h5>{{item.article.title}}</h5>
               <p>{{item.article.content}}</p>
             </a>

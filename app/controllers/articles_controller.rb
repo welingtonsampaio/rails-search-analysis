@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
     if params[:s].present?
       @articles = Article.s(params[:s]).records.to_a
       if cookies[:search].present?
-        s = SearchConsulting.find cookies[:search]
+        s = SearchConsulting.find_by_id cookies[:search]
         s.update_attributes term: params[:s]
       else
         s = SearchConsulting.create term: params[:s]
@@ -19,9 +19,9 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1
   def show
-    if cookies[:search].present?
+    if cookies[:search].present? and params[:from].present? and params[:from] == 'search'
       id = cookies.delete :search
-      sc = SearchConsulting.find id
+      sc = SearchConsulting.find_by_id id
       sc.term = @article.title
       sc.article_id = @article.id
       sc.save
@@ -31,6 +31,6 @@ class ArticlesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
-      @article = Article.find(params[:id])
+      @article = Article.find_by_id(params[:id])
     end
 end

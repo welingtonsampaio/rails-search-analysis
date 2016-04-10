@@ -6,19 +6,24 @@ class Article < ActiveRecord::Base
   after_save { Indexer.perform_async(:index, self.id) }
   after_destroy { Indexer.perform_async(:delete, self.id) }
 
-  settings index: {number_of_shards: 2} do
-    mappings dynamic: 'false' do
-      indexes :title, analyzer: 'english', index_options: 'offsets'
-    end
-  end
-
-
+  # Object returned to ElasticSearch to indexed.
+  #
+  # @param options [Hash] Merged objeto send to `as_json` method
+  #
+  # @return [Hash]
   def as_indexed_json(options={})
-    as_json(only: [:title]).merge({
-                                      click: search_consultings.count
-                                  })
+    as_json({only: [:title]}.merge(options)).merge({
+                                                       click: search_consultings.count
+                                                   })
   end
 
+  # Responsible for performing research with the score
+  # ElasticSearch to find the best result for the search.
+  #
+  # @param term [String] Term of search. eg.: "How can I"
+  # @param options [Hash] Parameters to consulting, options relevants: per_page | page
+  #
+  # @return [Elasticsearch::Model::Response::Response]
   def self.s(term, options={})
     options[:size] = options.delete(:per_page) || 10
     options[:from] = options[:size] * ((options.delete(:page) || 1)-1)
@@ -35,7 +40,7 @@ class Article < ActiveRecord::Base
                     field_value_factor: {
                         field: "click",
                         modifier: "log1p",
-                        factor: 0.2
+                        factor: 0.02
                     }
                 }
             ],
@@ -46,6 +51,5 @@ class Article < ActiveRecord::Base
 
     search options
   end
-
-
 end
+Article.index_name "zaez-railssearchanalysis-#{Rails.env}-article"

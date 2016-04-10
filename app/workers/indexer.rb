@@ -2,18 +2,18 @@ class Indexer
   include Sidekiq::Worker
   sidekiq_options queue: 'elasticsearch', retry: false
 
-  Logger = Sidekiq.logger.level == Logger::DEBUG ? Sidekiq.logger : nil
-  Client = Elasticsearch::Client.new host: 'localhost:9200', logger: Logger
-
   def perform(operation, record_id)
     logger.debug [operation, "ID: #{record_id}"]
 
     case operation.to_s
+      # Create and update index in ElasticSearch
       when /index/
-        record = Article.find(record_id)
-        Client.index  index: 'articles', type: 'article', id: record.id, body: record.as_indexed_json
+        record = Article.find_by_id(record_id)
+        Elasticsearch::Model.client.index  index: Article.index_name, type: 'article', id: record.id, body: record.as_indexed_json
+
+      # Delete the index in ElasticSearch
       when /delete/
-        Client.delete index: 'articles', type: 'article', id: record_id
+        Elasticsearch::Model.client.delete index: Article.index_name, type: 'article', id: record_id
       else raise ArgumentError, "Unknown operation '#{operation}'"
     end
   end

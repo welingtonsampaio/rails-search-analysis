@@ -1,19 +1,50 @@
 <div ng-app="Analysis" ng-cloak ng-controller="AnalysisCtrl">
   <div class="row m-t-30">
-    <table class="table striped">
+    <button class="btn btn-default" ng-click="pageRelevant()" ng-if="page != 'relevant'">
+      <i class="material-icons left">find_in_page</i>
+      Relevant Search
+    </button>
+    <button class="btn btn-default" ng-click="pageNotFound()" ng-if="page != 'not_found'">
+      <i class="material-icons left">do_not_disturb</i>
+      Not Found Search
+    </button>
+    <button class="btn btn-default" ng-click="resetStats()">
+      <i class="material-icons left">delete</i>
+      Clean Stats
+    </button>
+  </div>
+
+
+  <div class="row">
+    <table class="table striped" ng-if="page == 'relevant'">
       <thead>
-        <tr>
-          <th>Search Term</th>
-          <th>Content Preview</th>
-          <th>Total Search</th>
-        </tr>
+      <tr>
+        <th>Search Term</th>
+        <th>Content Preview</th>
+        <th>Total Search</th>
+      </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="item in results">
-          <td>{{item.article.title}}</td>
-          <td>{{item.article.content | limitTo:80}}...</td>
-          <td class="text-center">{{item.total}}</td>
-        </tr>
+      <tr ng-repeat="item in results">
+        <td>{{item.article.title}}</td>
+        <td>{{item.article.content | limitTo:80}}...</td>
+        <td class="text-center">{{item.total}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <table class="table striped" ng-if="page == 'not_found'">
+      <thead>
+      <tr>
+        <th>Search Term</th>
+        <th>Total Search</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="item in results">
+        <td>{{item.term}}</td>
+        <td class="text-center" width="150">{{item.total}}</td>
+      </tr>
       </tbody>
     </table>
   </div>

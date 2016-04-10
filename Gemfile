@@ -22,13 +22,10 @@ gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-ra
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-gem 'rails_12factor', group: :production
+gem 'puma', group: :production
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails'
 end
 
 group :development do
@@ -40,6 +37,14 @@ group :development do
   gem 'guard-rails'
   gem 'guard-bundler'
   gem 'guard-sidekiq'
-  gem 'guard-rspec'
+
+  gem 'capistrano', '~> 3.1'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano-rails-console'
+  gem 'capistrano3-puma', github: 'seuros/capistrano-puma'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano-sidekiq', '~> 0.3.0'
+
 end
 

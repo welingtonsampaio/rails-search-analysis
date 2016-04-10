@@ -1,11 +1,41 @@
-<p id="notice"><%= notice %></p>
+<div ng-app="Search" ng-cloak ng-controller="SearchCtrl">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="search" autofocus type="text" ng-model="s" placeholder="What do you need help with?">
+        </div>
+        <div ng-init="displaySearch=false" ng-show="displaySearch">
+          <div class="col s6 offset-s3">
+            <div class="progress">
+              <div class="indeterminate"></div>
+            </div>
+          </div>
+          <div class="col s6 offset-s3 text-center text-searching">Searching for "<span class="text-info">{{s}}</span>"</div>
+        </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
+        <div ng-show="displayNotFound">
+          <div class="col s12 text-center text-searching">Sorry, we found <span class="text-info">0</span> results for “<span class="text-info">{{s}}</span>"</div>
+        </div>
+
+        <div class="col s12" ng-show="results.length > 0">
+          <div class="collection">
+            <a ng-href="{{item.article.url}}?from=search" class="collection-item" ng-repeat="item in results">
+              <h5>{{item.article.title}}</h5>
+              <p>{{item.article.content}}</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="col s12 article-box" ng-show="!executedSearch">
+          <h1><%= @article.title %></h1>
+          <article>
+            <%= @article.content %>
+          </article>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
