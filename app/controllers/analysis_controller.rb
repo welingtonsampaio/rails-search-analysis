@@ -1,6 +1,7 @@
 class AnalysisController < ApplicationController
   skip_before_action :verify_authenticity_token
 
+  # GET /analysis/data.json
   def data
     counts = SearchConsulting.where.not('article_id' => nil).group(:article_id).count(:article_id).to_a.sort {|a,b| a[1] <=> b[1] }.reverse
     @analysis = []
@@ -15,7 +16,7 @@ class AnalysisController < ApplicationController
     render json: @analysis
   end
 
-
+  # GET /analysis/not_found.json
   def not_found
     counts = SearchConsulting.where('article_id' => nil).group(:term).count(:term).to_a.sort {|a,b| a[1] <=> b[1] }.reverse
     @analysis = []
@@ -28,7 +29,8 @@ class AnalysisController < ApplicationController
     end
     render json: @analysis
   end
-  
+
+  # DELETE /not_found
   def delete_by_term
     cookies.delete 'search'
     if params[:term].present?
